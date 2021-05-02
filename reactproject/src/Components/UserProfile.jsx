@@ -26,7 +26,7 @@ function UserProfile(){
   var [responseMsg,setResponse] = useState("*");
   /*do save post*/
   async function doSave(){
-    var url = "http://localhost:7000/react/profile/save-profile";
+    var url = "/api/react/profile/save-profile";
 
     /**pic uploading**/
     var formData = new FormData();
@@ -39,7 +39,7 @@ function UserProfile(){
   }
   /*do update post */
   async function doUpdatebtn() {
-    var url = "http://localhost:7000/react/profile/update-profile";
+    var url = "/api/react/profile/update-profile";
 
     var response = await axios.post(url, userrObj);
     alert(JSON.stringify(response.data));

@@ -22,20 +22,20 @@ mongoose.connect(dbConfig,{useNewUrlParser:true,useUnifiedTopology:true}).then((
 
 if(process.env.NODE_ENV==='production')
 {
-    app.use(express.static(path.join(__dirname,"testapp","build")));
+    app.use(express.static(path.join(__dirname,"reactproject","build")));
     app.get("*",(req,resp)=>{
-        resp.sendFile(path.join(__dirname,"testapp","build","index.html"));
+        resp.sendFile(path.join(__dirname,"reactproject","build","index.html"));
     })
 }
 
 var signupRouter = require("./routers/signup-router");
-app.use("/react",signupRouter);
+app.use("/api/react",signupRouter);
 
 var profileRouter = require("./routers/user-profile-router");
-app.use("/react/profile",profileRouter);
+app.use("/api/react/profile",profileRouter);
 
 var postMedRouter = require("./routers/post-med-router");
-app.use("/react/profile/medicine",postMedRouter);
+app.use("/api/react/profile/medicine",postMedRouter);
 
 app.listen(PORT,()=>{
     console.log("Server started");

@@ -30,7 +30,7 @@ function MedicineFinder() {
 
 //FETCH ALL DISTINCT CITIES
 useEffect(async() => {
-    var url="http://localhost:7000/react/profile/medicine/fetch-all";
+    var url="/api/react/profile/medicine/fetch-all";
     var response=await axios.post(url);
     filljsonAryCity(response.data);
 }, [])
@@ -39,7 +39,7 @@ useEffect(async() => {
 async function doFill(e)
 {    
     doUpdate(e);
-    var url="http://localhost:7000/react/profile/medicine/fetch-medicine/"+e.target.value;
+    var url="/api/react/profile/medicine/fetch-medicine/"+e.target.value;
     var response=await axios.post(url);
     fillMedicine(response.data);
     //alert(JSON.stringify(response.data));
@@ -49,7 +49,7 @@ async function doFill(e)
 async function showCard(finder)
 {
     
-    var url="http://localhost:7000/react/profile/medicine/fetch-provider/"+finder.cityy+"/"+finder.medname;
+    var url="/api/react/profile/medicine/fetch-provider/"+finder.cityy+"/"+finder.medname;
     var response=await axios.post(url);
     fillProviderObj(response.data);
     //alert(JSON.stringify(response.data));
@@ -58,7 +58,7 @@ async function showCard(finder)
 //fetching mobile number
 async function doFetchProviderDetails(obj){
     // alert(JSON.stringify(obj));
-    var url="http://localhost:7000/react/profile/fetch-details";
+    var url="/api/react/profile/fetch-details";
     var response=await axios.post(url,obj);
     // alert(JSON.stringify(response.data));
     var {mobile}=response.data[0];

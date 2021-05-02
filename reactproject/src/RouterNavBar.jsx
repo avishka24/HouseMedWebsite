@@ -25,12 +25,12 @@ function RouterNavBar(){
         })
     }
     async function doSavePost(){
-        var url = "http://localhost:7000/react/sign-up";
+        var url = "/api/react/sign-up";
         var response = await axios.post(url,userObj);
         alert(JSON.stringify(response.data));
     }
     async function doLogin(){
-        var url = "http://localhost:7000/react/log-in";
+        var url = "/api/react/log-in";
         var response = await axios.post(url,userObj);
         alert(JSON.stringify(response.data));
         window.location.href="/user-dashboard";
@@ -94,7 +94,7 @@ return(
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We'll never share your information with anyone else.
         </Form.Text>
         <Modal.Body>
-        <Form method="post" action="http://localhost:7000/react/sign-up"> 
+        <Form method="post" action="/api/react/sign-up"> 
         <Form.Group controlId="formBasicUid">
         <Form.Label>User name</Form.Label>
         <Form.Control type="text" name="uid" value={userObj.uid} placeholder="Enter user name" onChange={doUpdate}/>

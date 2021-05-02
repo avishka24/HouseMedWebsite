@@ -26,7 +26,7 @@ var [loading,setLoading]=useState();
     },[])
     async function doFetch(){
       
-      var url = "http://localhost:7000/react/profile/medicine/fetchMed";
+      var url = "/api/react/profile/medicine/fetchMed";
       var response = await axios.post(url,medObj);
       fillJsonArray(response.data);
       console.log(response.data);
@@ -34,7 +34,7 @@ var [loading,setLoading]=useState();
     }
    
     async function doDelete(uid,medname){
-      var url= "http://localhost:7000/react/profile/medicine/delete-medicine/"+uid+"/"+medname;
+      var url= "/api/react/profile/medicine/delete-medicine/"+uid+"/"+medname;
       var response = await axios.post(url,medObj);
       // alert(medObj.data);
       await alert(JSON.stringify(response.data));

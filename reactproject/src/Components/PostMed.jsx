@@ -27,7 +27,7 @@ function PostMed(){
       var [responseMsg,setResponse] = useState("*");
       /*do save post*/
       async function saveMed(){
-        var url = "http://localhost:7000/react/profile/medicine/save-medicine";
+        var url = "/api/react/profile/medicine/save-medicine";
         
         /**pic uploading**/
         var formData = new FormData();
