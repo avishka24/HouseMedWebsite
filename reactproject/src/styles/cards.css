@@ -1,0 +1,109 @@
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 80%;
+    margin:auto 9rem;
+}
+.card1{
+    width: 60%;
+    border-radius: 0;
+    margin: 2rem;
+    height: 17rem;
+    margin-top: 7.7rem;
+  }
+.card2{
+    width: 60%;
+    border-radius: 0;
+    margin: 2rem;
+    margin-top: 11rem;
+    height: 17rem;
+  }
+  .card3{
+    width: 60%;
+    background-color: rgba(0,0,0,0.01);
+    border-radius: 0;
+    margin: 2rem;
+    margin-top: 14rem;
+    height: 17rem;
+  }
+  .card4{
+    width: 60%;
+    background-color: rgba(0,0,0,0.01);
+    border-radius: 0;
+    margin: 2rem;
+    margin-top: 17rem;
+    height: 17rem;
+  }
+.card1,
+.card2,
+.card3,
+.card4{
+    /* box-shadow: -5px -5px 5px 5x #BBDEFB; */
+    box-shadow: 5px 5px 19px rgba(0,0,0,0.3);
+    animation-name: shadow-show;
+    animation-duration: 1.5s;
+}
+
+.cards hr {
+    display: block;
+    border: none;
+    height: 2px;
+    background-color: #BBDEFB;
+    margin: 0px;
+    animation-name: line-show;
+    animation-duration: 0.9s;
+    transition-timing-function: cubic-bezier(0.795, 0, 0.165, 1);
+
+}
+.user{
+  position: relative;
+  top: 4rem;
+  text-align: center;
+  max-width: 500px;
+  font-weight: bolder;
+  font-family:serif;
+  /* color: #1976D2 !important; */
+}
+.user::before{
+  content:"";
+  display: block;
+  top: 1.4rem;
+  height: .2rem;
+  width: 11.24rem;
+  background-color: rgba(0,0,0,0.08);
+  position:absolute;
+  
+}
+.user::before,
+.user::after{
+    content: '';
+    position: absolute;
+}
+
+.user::after{
+    width: .6rem;
+    height: .6rem;
+    border-radius: 100%;
+    margin-top: 1.2rem;
+    margin-left: -8rem;
+    opacity: 0.9;
+    background-color: rgba(0,0,0,0.3);
+    /* background-color: #BBDEFB; */
+}
+@keyframes line-show {
+    from {
+      margin: 0px 100px;
+    }
+    to {
+      margin: 0px;
+    }
+  }
+@keyframes shadow-show {
+    from {
+      box-shadow: 5px 5px 19px #fff;
+    }
+    to {
+      box-shadow: 5px 5px 19px rgba(0,0,0,0.3);
+    }
+}
