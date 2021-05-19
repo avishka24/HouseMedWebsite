@@ -1,38 +1,38 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.person{
-    background-color: #eeeeee;
-    width: 17rem;
-    height: 17rem;
-    margin:2rem auto;
-    border-radius: 0.3rem;
-    text-align: center;
+.person {
+  background-color: #eeeeee;
+  width: 17rem;
+  height: 17rem;
+  margin: 2rem auto;
+  border-radius: 0.3rem;
+  text-align: center;
 }
-.person:hover{
-    box-shadow: 2px 5px 10px rgba(0,0,0,0.3);
+.person:hover {
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
 }
-.person i{
-    border-radius: 50%;
-    border:0.1rem solid teal;
+.person i {
+  border-radius: 50%;
+  border: 0.1rem solid teal;
 }
-.person h4{
-    text-transform: capitalize;
-    margin:0.rem 0;
-    letter-spacing: 0.15rem;
-    color: teal;
+.person h4 {
+  text-transform: capitalize;
+  margin: 0rem 0;
+  letter-spacing: 0.15rem;
+  color: teal;
 }
-@media screen and (min-width:768px){
-    .person-list{
-        display: grid;
-        grid-template-columns:1fr 1fr;
-        grid-gap:1rem;
-    }
+@media screen and (min-width: 768px) {
+  .person-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
 }
-@media screen and (min-width:992px){
-    .person-list{
-        grid-template-columns: repeat(3,1fr);
-    }
+@media screen and (min-width: 992px) {
+  .person-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
